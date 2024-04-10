@@ -1,20 +1,17 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
-import bulletinReducer from './bulletinReducer';
-import AsyncBulletinBoard from './AsyncBulletinBoard';
+import reklamaReducer from './reklamaReducer';
+import Main from './Main';
 
-const store = createStore(bulletinReducer);
+const store = createStore(reklamaReducer);
 
 function App() {
   return (
     <Provider store={store}>
       <div className="App">
-        <header className="App-header">
-          <h1>Bulletin Board App</h1>
-        </header>
         <main>
-          <AsyncBulletinBoard />
+          <Main />
         </main>
       </div>
     </Provider>
